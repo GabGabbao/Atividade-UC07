@@ -1,5 +1,6 @@
 # Atividade-UC07
-Média de notas 
+#Média de notas 
+
 
 Resultado esperado (exemplo): 
 Média: 8

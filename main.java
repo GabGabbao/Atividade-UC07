@@ -1,6 +1,31 @@
 import java.util.Scanner;
 
 public class main {
+    
+    public static double calcular_media(double[] notas){
+        double mediaAluno = 0;
+        double soma = 0;
+        for (int i = 0; i < notas.length; i++){
+            soma += notas[i];
+        }//fim for que soma as notas recebidas
+
+        mediaAluno = soma/notas.length;
+        //calculo da media
+    
+        return mediaAluno;
+}//fim função de calculo
+
+public static String classificarMedia(double media) {
+        if (media < 0 || media > 10) {
+            return "Média inválida";
+        } else if (media >= 7) {
+            return "Aprovado";
+        } else if (media >= 5) {
+            return "Recuperação";
+        } else {
+            return "Reprovado";
+        }
+    }
 
     public static void main(String[] args) {
 
@@ -48,74 +73,12 @@ public class main {
             System.out.println(notas[i]);
         }
 
+   double media = calcular_media(notas);
+        String resultado = classificarMedia(media);
+
+     System.out.println("\nMédia final: " + media);
+     System.out.println("Classificação: " + resultado);
+
         ler.close();
     }
 }
-
-public class main{
-    
-    public static double calcular_media(double[] notas){
-        
-        
-        double mediaAluno = 0;
-        double soma = 0;
-
-        for (int i = 0; i < notas.length; i++){
-
-            soma += notas[i];
-
-        }//fim for que soma as notas recebidas
-
-        mediaAluno = soma/notas.length;
-        //calculo da media
-    
-        return mediaAluno;
-
-
-}//fim função de calculo
-
-
-
-public static void main(String[] args) {
-    
-    double[] n = {7,8,9,4,1,5,8}; 
-
-    double mediaAluno = calcular_media(n);
-
-    System.out.println("A media é: " + mediaAluno); //teste, logo sera removido
-
-
-}//fim main
-
-
-
-
-
-
-}//fim class
->>>>>>> origin/feature-calculo-media
-
-public class main {
-    public static String classificarMedia(double media) {
-        if (media < 0 || media > 10) {
-            return "Média inválida";
-        } else if (media >= 7) {
-            return "Aprovado";
-        } else if (media >= 5) {
-            return "Recuperação";
-        } else {
-            return "Reprovado";
-        }
-    }
-
-
-        public static void main(String[] args) {
-            double mediaAluno = 6.5;
-
-            String resultado = classificarMedia(mediaAluno);
-
-            System.out.println("Média final: " + mediaAluno);
-            System.out.println("Classificação: " + resultado);
-        }
-    }
->>>>>>> origin/feature/classificacao-saida

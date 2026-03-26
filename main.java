@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-package main;
-
 import java.util.Scanner;
 
 public class main {
@@ -55,8 +51,8 @@ public class main {
         ler.close();
     }
 }
-=======
-public class Main{
+
+public class main{
     
     public static double calcular_media(double[] notas){
         
@@ -98,7 +94,7 @@ public static void main(String[] args) {
 
 }//fim class
 >>>>>>> origin/feature-calculo-media
-=======
+
 public class main {
     public static String classificarMedia(double media) {
         if (media < 0 || media > 10) {
